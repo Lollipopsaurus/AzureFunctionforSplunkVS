@@ -35,7 +35,7 @@ namespace AzureFunctionForSplunk
     {
         [FunctionName("EhLadTelemetryExt")]
         public static async Task Run(
-            [EventHubTrigger("%input-hub-name-lad%", Connection = "hubConnection")]string[] messages,
+            [EventHubTrigger("insights-metrics-pt1m", Connection = "hubConnection")]string[] messages,
             IBinder blobFaultBinder,
             Binder queueFaultBinder,
             TraceWriter log)
